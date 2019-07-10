@@ -78,6 +78,9 @@ RUN curl -sS -L -O http://sourceforge.net/projects/geoserver/files/GeoServer/$GE
 # Make Geoserver data dir
 VOLUME $GEOSERVER_DATA_DIR
 
+# Satellittbilder
+VOLUME /usr/local/satellittbilder
+
 # Install GeoServer Plugins
 RUN for PLUGIN in ${GEOSERVER_PLUGINS}; \
     do \
