@@ -10,7 +10,7 @@ fi
 if [ "$1" = 'geoserver' ]; then
     id
     whoami
-    exec /usr/share/geoserver/bin/startup.sh
+    # start tomcat
+    exec env JAVA_OPTS="${JAVA_OPTS}" catalina.sh run
 fi
 
-exec "$@"
